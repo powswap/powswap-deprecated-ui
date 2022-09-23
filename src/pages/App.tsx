@@ -23,9 +23,6 @@ import Navbar from '../components/NavBar'
 import Popups from '../components/Popups'
 import { useIsExpertMode } from '../state/user/hooks'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
-import { RedirectDuplicateTokenIdsV2 } from './AddLiquidityV2/redirects'
-import Earn from './Earn'
-import Manage from './Earn/Manage'
 import PoolV2 from './Pool/v2'
 import PoolFinder from './PoolFinder'
 import RemoveLiquidity from './RemoveLiquidity'
@@ -176,8 +173,6 @@ export default function App() {
                   /> */}
                   {/* <Route path="create-proposal" element={<Navigate to="/vote/create-proposal" replace />} /> */}
                   {/* <Route path="claim" element={<OpenClaimAddressModalAndRedirectToSwap />} /> */}
-                  <Route path="farm" element={<Earn />} />
-                  <Route path="farm/:currencyIdA/:currencyIdB" element={<Manage />} />
 
                   <Route path="send" element={<RedirectPathToSwapOnly />} />
                   <Route path="swap/:outputCurrency" element={<RedirectToSwap />} />
@@ -188,10 +183,6 @@ export default function App() {
                   {<Route path="pool" element={<PoolV2 />} />}
                   {/* <Route path="pool/:tokenId" element={<PositionPage />} /> */}
 
-                  <Route path="add/v2" element={<RedirectDuplicateTokenIdsV2 />}>
-                    <Route path=":currencyIdA" />
-                    <Route path=":currencyIdA/:currencyIdB" />
-                  </Route>
                   {/* <Route path="add" element={<RedirectDuplicateTokenIds />}>
                     {/* this is workaround since react-router-dom v6 doesn't support optional parameters any more }
                     <Route path=":currencyIdA" />

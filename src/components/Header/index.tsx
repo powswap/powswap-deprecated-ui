@@ -303,11 +303,8 @@ export default function Header() {
         >
           <Trans>Pool</Trans>
         </StyledNavLink>
-        <StyledNavLink data-cy="farm-nav-link" id={`farm-nav-link`} to={'/farm'}>
-          <Trans>Farm</Trans>
-        </StyledNavLink>
-        <StyledExternalLink id={`charts-nav-link`} href="https://dexscreener.com/ethereumpow/uniswap">
-          <Trans>Charts</Trans>
+        <StyledExternalLink id={`powswap-nav-link`} href="https://app.powswap.io">
+          <Trans>Powswap</Trans>
           <sup>↗</sup>
         </StyledExternalLink>
       </HeaderLinks>
