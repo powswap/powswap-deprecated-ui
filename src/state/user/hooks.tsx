@@ -58,7 +58,7 @@ export function useIsDarkMode(): boolean {
   )
 
   //return userDarkMode === null ? matchesDarkMode : userDarkMode
-  return true
+  return false
 }
 
 export function useDarkModeManager(): [boolean, () => void] {
